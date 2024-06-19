@@ -16,7 +16,7 @@ public class Listner extends BaseClass implements ITestListener {
 		String name = result.getName();
 		TakesScreenshot s = (TakesScreenshot)driver;
 		File src = s.getScreenshotAs(OutputType.FILE);
-		File dest = new File("Screenshot1/"+name+"ss.png");
+		File dest = new File("./Screenshot1"+name+"ss.png");
 		try {
 			FileUtils.copyFile(src, dest);
 		} catch (IOException e) {

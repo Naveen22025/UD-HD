@@ -16,6 +16,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -101,4 +102,9 @@ public class FileLib {
 		r.keyRelease(KeyEvent.VK_TAB);
 	}
 	
-} 
+	public void ScrollDown(WebDriver driver) {
+		driver.get("https://jharkhandegovernance.com/property/safform/new/0");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	}

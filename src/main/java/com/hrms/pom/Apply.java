@@ -1,5 +1,6 @@
 package com.hrms.pom;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -212,7 +213,24 @@ public class Apply {
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement Save6thNextBtn;
 
+	@FindBy(xpath="//button[@type='submit']")
+	private WebElement Submit6thNextBtn;
 	
+	@FindBy(xpath="(//button[@type='button'])[2]")
+	private WebElement SubmitFinalBtn;
+	
+//	@FindBy(xpath="//div[@class='cursor-pointer text-center']")
+	
+	
+	
+	public WebElement getSubmitFinalBtn() {
+				return SubmitFinalBtn;
+	}
+
+	public WebElement getSubmit6thNextBtn() {
+		return Submit6thNextBtn;
+	}
+
 	public WebElement getZoneBtn() {
 		return ZoneBtn;
 	}

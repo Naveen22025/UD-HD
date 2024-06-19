@@ -5,6 +5,8 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -150,7 +152,20 @@ public class ApplyTest extends BaseClass{
 		f.RobotClass();
 		a.getWaterHarvestingConstructionDateBtn().sendKeys("15");
 		a.getWaterHarvestingConstructionDateBtn().sendKeys("06");
-		a.getWaterHarvestingConstructionDateBtn().sendKeys("2024");
+		a.getWaterHarvestingConstructionDateBtn().sendKeys("2024");					
+		
+		f.RobotClass();
+		f.RobotClass();
+		f.RobotClass();
+		f.ExplicitWait(driver, Duration.ofSeconds(10), a.getSave6thNextBtn());
+		a.getSubmit6thNextBtn().submit();
+
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
+		
+		a.getSubmitFinalBtn().submit(); 
+
 	}
 	
 	
